@@ -1,0 +1,13 @@
+services:
+  mzuca-web:
+    image: nginx:alpine
+    container_name: mzuca-web
+    ports:
+      - "8080:80"
+
+  mzuca-linux:
+    image: alpine:latest
+    container_name: mzuca-linux
+    stdin_open: true
+    tty: true
+    command: sh
